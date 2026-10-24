@@ -49,6 +49,18 @@ function renderRepositories(repositories) {
   }
 }
 
+function hasRequiredFields(repository) {
+  return (
+    repository !== null &&
+    typeof repository === "object" &&
+    ["name", "owner", "description", "url", "starredAt"].every(
+      (field) =>
+        typeof repository[field] === "string" &&
+        repository[field].trim().length > 0
+    )
+  );
+}
+
 async function loadRepositories() {
   try {
     const response = await fetch("events.json");
@@ -61,6 +73,10 @@ async function loadRepositories() {
 
     if (!Array.isArray(repositories)) {
       throw new Error("Repository data must be a list.");
+    }
+
+    if (!repositories.every(hasRequiredFields)) {
+      throw new Error("Each repository must include name, owner, description, url, and starredAt.");
     }
 
     renderRepositories(repositories);
