@@ -1,0 +1,23 @@
+[
+  {
+    "name": "freeCodeCamp",
+    "owner": "freeCodeCamp",
+    "description": "Learn to code for free with millions of people.",
+    "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "starredAt": "2025-02-14"
+  },
+  {
+    "name": "The Algorithms",
+    "owner": "TheAlgorithms",
+    "description": "Open-source collection of algorithms implemented in various languages.",
+    "url": "https://github.com/TheAlgorithms",
+    "starredAt": "2025-01-28"
+  },
+  {
+    "name": "Vite",
+    "owner": "vitejs",
+    "description": "Next generation frontend tooling.",
+    "url": "https://github.com/vitejs/vite",
+    "starredAt": "2024-12-09"
+  }
+]
